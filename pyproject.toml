@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "swane_supplement"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="LICE - Commissione Neuroimmagini", email="dev@lice.it" },
 ]
