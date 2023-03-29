@@ -22,7 +22,7 @@ dist/
 # Maven
 target/
 dist/
-SWANi_supplement.egg-info
+swane_supplement.egg-info/
 
 # JetBrains IDE
 .idea/
