@@ -1,36 +1,4 @@
 from setuptools import setup, find_packages
-from setuptools.command.build_py import build_py as build_py_orig
-import os, zipfile
-
-
-class build_py(build_py_orig):
-    """
-    Custom build_py command:
-    - Creates SwaneSlicerModule.zip inside resources before building the package.
-    """
-
-    def run(self):
-        # Paths
-        src_folder = os.path.join("swane_supplement", "resources", "SwaneSlicerModule")
-        zip_file = os.path.join("swane_supplement", "resources", "SwaneSlicerModule.zip")
-
-        # Ensure resources folder exists
-        os.makedirs(os.path.dirname(zip_file), exist_ok=True)
-
-        if not os.path.exists(src_folder):
-            print(f"Source folder does not exist: {src_folder}")
-        else:
-            with zipfile.ZipFile(zip_file, "w", zipfile.ZIP_DEFLATED) as zf:
-                for root, dirs, files in os.walk(src_folder):
-                    for f in files:
-                        abs_path = os.path.join(root, f)
-                        arcname = os.path.join("SwaneSlicerModule", os.path.relpath(abs_path, src_folder))
-                        zf.write(abs_path, arcname=arcname)
-            print(f"Created {zip_file}")
-
-        # Continue standard build
-        super().run()
-
 
 setup(
     name="swane_supplement",
@@ -55,7 +23,4 @@ setup(
             "icons/*",
         ],
     },
-    cmdclass={"build_py": build_py},
 )
-
-
