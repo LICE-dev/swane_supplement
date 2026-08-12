@@ -1,0 +1,123 @@
+# Shared Local Environment configuration.
+version = 1
+name = "SWANe Supplement"
+
+[setup]
+script = "bash .codex/scripts/invoke-project-action.sh setup"
+
+[setup.darwin]
+script = "bash .codex/scripts/invoke-project-action.sh setup"
+
+[setup.linux]
+script = "bash .codex/scripts/invoke-project-action.sh setup"
+
+[setup.win32]
+script = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action setup'
+
+[[actions]]
+name = "Bootstrap Python"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh bootstrap"
+platform = "darwin"
+
+[[actions]]
+name = "Bootstrap Python"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh bootstrap"
+platform = "linux"
+
+[[actions]]
+name = "Bootstrap Python"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action bootstrap'
+platform = "win32"
+
+[[actions]]
+name = "Compile"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh compile"
+platform = "darwin"
+
+[[actions]]
+name = "Compile"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh compile"
+platform = "linux"
+
+[[actions]]
+name = "Compile"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action compile'
+platform = "win32"
+
+[[actions]]
+name = "Resource check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh resource-check"
+platform = "darwin"
+
+[[actions]]
+name = "Resource check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh resource-check"
+platform = "linux"
+
+[[actions]]
+name = "Resource check"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action resource-check'
+platform = "win32"
+
+[[actions]]
+name = "Format check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh format"
+platform = "darwin"
+
+[[actions]]
+name = "Format check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh format"
+platform = "linux"
+
+[[actions]]
+name = "Format check"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action format'
+platform = "win32"
+
+[[actions]]
+name = "Pip check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh pip-check"
+platform = "darwin"
+
+[[actions]]
+name = "Pip check"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh pip-check"
+platform = "linux"
+
+[[actions]]
+name = "Pip check"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action pip-check'
+platform = "win32"
+
+[[actions]]
+name = "Build package"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh build"
+platform = "darwin"
+
+[[actions]]
+name = "Build package"
+icon = "tool"
+command = "bash .codex/scripts/invoke-project-action.sh build"
+platform = "linux"
+
+[[actions]]
+name = "Build package"
+icon = "tool"
+command = 'powershell -NoProfile -ExecutionPolicy Bypass -File ".codex\scripts\Invoke-ProjectAction.ps1" -Action build'
+platform = "win32"
