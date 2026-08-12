@@ -1,0 +1,4 @@
+interface:
+  display_name: "SWANe Supplement Maintainer"
+  short_description: "Maintain SWANe resources and packaging"
+  default_prompt: "Use $swane-supplement-maintainer to update and validate SWANe supplemental resources."
