@@ -49,3 +49,7 @@ Thumbs.db
 *.wmv
 
 .spyproject
+
+# Local Python environments
+.venv/
+venv/
